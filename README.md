@@ -19,7 +19,7 @@
 - [Nginx](https://github.com/DimNS/LEMP/blob/master/nginx.md)
   - [.htpasswd](https://github.com/DimNS/LEMP/blob/master/htpasswd.md)
 - [PHP](https://github.com/DimNS/LEMP/blob/master/php.md)
-  - [XHProf - tideways_xhprof](https://github.com/DimNS/LEMP/blob/master/tideways_xhprof.md)
+  - [XHProf (tideways_xhprof)](https://github.com/DimNS/LEMP/blob/master/tideways_xhprof.md)
 - [SSL](https://github.com/DimNS/LEMP/blob/master/ssl.md)
 - [Подключение домена к вебсерверу](https://github.com/DimNS/LEMP/blob/master/domain.md)
 - [Повседневные команды](https://github.com/DimNS/LEMP/blob/master/commands.md)
