@@ -49,3 +49,83 @@
   ```
   apt edit-sources
   ```
+
+## MySQL
+
+### Система
+- Отображение ошибок после запроса
+  ```
+  SHOW WARNINGS;
+  ```
+- Значения системных переменных
+  ```
+  SHOW VARIABLES;
+  ```
+- Статистика по mysqld процессам
+  ```
+  SHOW [FULL] PROCESSLIST;
+  ```
+- Общая статистика
+  ```
+  SHOW STATUS;
+  ```
+- Статистика по всем таблицам в базе
+  ```
+  SHOW TABLE STATUS [FROM db_name];
+  ```
+
+### Таблицы
+- Список баз данных
+  ```
+  SHOW DATABASES;
+  ```
+- Список таблиц в базе
+  ```
+  SHOW TABLES [FROM db_name];
+  ```
+- Список столбцов в таблице
+  ```
+  SHOW COLUMNS FROM таблица [FROM db_name];
+  ```
+- Показать структуру таблицы в формате "CREATE TABLE"
+  ```
+  SHOW CREATE TABLE table_name;
+  ```
+- Список индексов
+  ```
+  SHOW INDEX FROM tbl_name;
+  ```
+
+### Пользователи
+- Посмотрим на политику паролей
+  ```
+  SHOW GLOBAL VARIABLES LIKE 'validate_password%';
+  ```
+- Создание нового пользователя
+  ```
+  CREATE USER 'имя_пользователя'@'127.0.0.1' IDENTIFIED BY 'пароль';
+  ```
+  > - Выдадим права на доступ ко ВСЕМ базам
+  > ```
+  > GRANT ALL PRIVILEGES ON *.* TO 'имя_пользователя'@'127.0.0.1' WITH GRANT OPTION;
+  > ```
+  > - Выдадим права на доступ к УКАЗАННОЙ базе
+  > ```
+  > GRANT ALL PRIVILEGES ON имя_базы.* TO 'имя_пользователя'@'127.0.0.1';
+  > ```
+  > - Очищаем кеш прав
+  > ```
+  > FLUSH PRIVILEGES;
+  > ```
+- Привилегии для пользователя
+  ```
+  SHOW GRANTS FOR имя_пользователя [FROM db_name];
+  ```
+- Смотрим таблицу пользователей
+  ```
+  SELECT User, Host, Grant_priv FROM mysql.user;
+  ```
+- Удаление пользователя
+  ```
+  DROP USER IF EXISTS имя_пользователя;
+  ```
