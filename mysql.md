@@ -1,5 +1,14 @@
 # MySQL
 
+### Установка
+```
+apt update
+apt policy mysql-server
+apt install mysql-server -y
+service mysql status
+mysql_secure_installation
+```
+
 ### Глобальные настройки
 ```
 nano /etc/mysql/my.cnf
