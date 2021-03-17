@@ -75,12 +75,11 @@ nano /etc/nginx/sites-available/default
 > 
 >     # Location for php
 >     location ~ \.php$ {
->         include fastcgi.conf;
+>         try_files $uri =404;
 > 
+>         include fastcgi.conf;
 >         fastcgi_pass unix:/run/php/php7.x-fpm.sock;
 >         fastcgi_index index.php;
-> 
->         try_files $uri =404;
 >     }
 > 
 >     # Location for html, css and js
