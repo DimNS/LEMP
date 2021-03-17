@@ -56,6 +56,7 @@ nano /etc/nginx/sites-available/default
 >         log_not_found off;
 >     }
 > 
+>     # Location for php-fpm status
 >     location /status7x {
 >         auth_basic "Restricted";
 >         auth_basic_user_file /var/www/domains/domain.hosting.ru/.htpasswd;
@@ -65,12 +66,13 @@ nano /etc/nginx/sites-available/default
 >         fastcgi_pass unix:/run/php/php7.x-fpm.sock;
 >     }
 >     
->     # location для php
->     
 >     location / {
 >         try_files $uri $uri/ /index.php?$query_string;
+>         # or
+>         #try_files $uri $uri/ /index.html?$query_string;
 >     }
 > 
+>     # Location for php
 >     location ~ \.php$ {
 >         include fastcgi.conf;
 > 
@@ -80,18 +82,14 @@ nano /etc/nginx/sites-available/default
 >         try_files $uri =404;
 >     }
 > 
->     # location для html и статики
->     
+>     # Location for html, css and js
 >     location ~* ^.+\.(html|css|js)$ {
 >         expires 60s;
 >     }
 > 
+>     # Location for images
 >     location ~* ^.+\.(jpg|gif|png)$ {
 >         expires 3d;
->     }
-> 
->     location / {
->         try_files $uri $uri/ /index.html?$query_string;
 >     }
 > }
 > ```
