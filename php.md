@@ -47,7 +47,7 @@ nano /etc/nginx/sites-available/default
 >     root /var/www/domains/domain.hosting.ru;
 >     index index.php index.html
 > 
->     error_page 405 =200 $uri;
+>     error_page 405 =200 $request_uri;
 > 
 >     # Disallow all dot files
 >     location ~ /\. {
