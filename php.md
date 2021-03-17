@@ -66,6 +66,7 @@ nano /etc/nginx/sites-available/default
 >         fastcgi_pass unix:/run/php/php7.x-fpm.sock;
 >     }
 >     
+>     # Root location
 >     location / {
 >         try_files $uri $uri/ /index.php?$query_string;
 >         # or
