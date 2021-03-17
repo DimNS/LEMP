@@ -68,29 +68,32 @@ nano /etc/nginx/sites-available/default
 >     
 >     # Root location
 >     location / {
->         try_files $uri $uri/ /index.php?$query_string;
->         # or
->         #try_files $uri $uri/ /index.html?$query_string;
->     }
+>         try_files $uri $uri/ /index.php$is_args$args;
 > 
->     # Location for php
->     location ~ \.php$ {
->         try_files $uri =404;
+>         # Location for php
+>         location ~ \.php$ {
+>             try_files $uri =404;
 > 
->         include fastcgi.conf;
->         fastcgi_pass unix:/run/php/php7.x-fpm.sock;
->         fastcgi_index index.php;
+>             include fastcgi.conf;
+>             fastcgi_pass unix:/run/php/php7.x-fpm.sock;
+>             fastcgi_index index.php;
+>         }        
 >     }
-> 
->     # Location for html, css and js
->     location ~* ^.+\.(html|css|js)$ {
->         expires 60s;
->     }
-> 
->     # Location for images
->     location ~* ^.+\.(jpg|gif|png)$ {
->         expires 3d;
->     }
+>     
+>     # Root location alternatively
+>     #location / {
+>     #    try_files $uri $uri/ /index.html$is_args$args;
+>     #
+>     #    # Location for html, css and js
+>     #    location ~* ^.+\.(html|css|js)$ {
+>     #        expires 60s;
+>     #    }
+>     #
+>     #    # Location for images
+>     #    location ~* ^.+\.(jpg|gif|png)$ {
+>     #        expires 3d;
+>     #    }
+>     #}
 > }
 > ```
 Проверяем и перечитываем конфиг:
