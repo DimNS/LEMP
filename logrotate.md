@@ -2,14 +2,14 @@
 
 ### Установка
 ```
-apt update
-apt install logrotate -y
+sudo apt update
+sudo apt install logrotate -y
 ```
 
 ### Настройка
 ```
-touch /etc/logrotate.d/www
-nano /etc/logrotate.d/www
+sudo touch /etc/logrotate.d/www
+sudo nano /etc/logrotate.d/www
 ```
 > Содержимое для файла:
 > ```
@@ -56,5 +56,5 @@ nano /etc/logrotate.d/www
 
 ### Перезапускаем сервис
 ```
-service logrotate restart
+sudo service logrotate restart
 ```
