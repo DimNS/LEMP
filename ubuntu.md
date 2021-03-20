@@ -2,18 +2,18 @@
 
 ### Первая настройка
 ```
-apt update
-apt upgrade -y
-apt autoremove
+sudo apt update
+sudo apt upgrade -y
+sudo apt autoremove
 
-apt update
-apt install nmap htop mc composer iptables-persistent fail2ban software-properties-common net-tools zip unzip -y
+sudo apt update
+sudo apt install nmap htop mc composer iptables-persistent fail2ban software-properties-common net-tools zip unzip -y
 ```
 
 ### Очистка временных каталогов от содержимого которое не использовалось больше 30 дней
 ```
-touch /etc/tmpfiles.d/clear.conf
-nano /etc/tmpfiles.d/clear.conf
+sudo touch /etc/tmpfiles.d/clear.conf
+sudo nano /etc/tmpfiles.d/clear.conf
 ```
 > Содержимое для файла:
 > ```
@@ -23,7 +23,7 @@ nano /etc/tmpfiles.d/clear.conf
 
 ### Меняем порт SSH
 ```
-nano /etc/ssh/sshd_config
+sudo nano /etc/ssh/sshd_config
 ```
 > Содержимое для файла:
 > ```
@@ -31,12 +31,12 @@ nano /etc/ssh/sshd_config
 > ```
 Перезапускаем сервис `ПОСЛЕ ЭТОЙ КОМАНДЫ ВАС ВЫКИНЕТ ИЗ КОНСОЛИ И НАДО БУДЕТ СНОВА ВОЙТИ`:
 ```
-service ssh restart
+sudo service ssh restart
 ```
 
 ### Настраиваем fail2ban
 ```
-nano /etc/fail2ban/jail.local
+sudo nano /etc/fail2ban/jail.local
 ```
 > Содержимое для файла:
 > ```
@@ -53,8 +53,8 @@ nano /etc/fail2ban/jail.local
 > ```
 Активируем и перезапускаем сервис:
 ```
-systemctl enable fail2ban
-service fail2ban restart
+sudo systemctl enable fail2ban
+sudo service fail2ban restart
 ```
 
 ### Настраиваем iptables
