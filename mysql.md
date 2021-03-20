@@ -2,16 +2,16 @@
 
 ### Установка
 ```
-apt update
-apt policy mysql-server
-apt install mysql-server -y
-service mysql status
-mysql_secure_installation
+sudo apt update
+sudo apt policy mysql-server
+sudo apt install mysql-server -y
+sudo service mysql status
+sudo mysql_secure_installation
 ```
 
 ### Глобальные настройки
 ```
-nano /etc/mysql/my.cnf
+sudo nano /etc/mysql/my.cnf
 ```
 > Содержимое для файла:
 > ```
@@ -32,7 +32,7 @@ nano /etc/mysql/my.cnf
 
 ### Перезапускаем сервис
 ```
-service mysql restart
+sudo service mysql restart
 ```
 
 ### Теперь для подключения к mysql в консоли надо писать так
