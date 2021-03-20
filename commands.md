@@ -9,45 +9,45 @@
 ### Основные команды apt
 - Обновить списки доступных пакетов - это самая главная команда которую необходимо выполнять практически перед любой другой командой apt, чтобы быть уверенными что работаем с актуальным списком пакетов
   ```
-  apt update
+  sudo apt update
   ```
 - Поиск пакетов по имени
   ```
-  apt search ИМЯ_ПАКЕТА
+  sudo apt search ИМЯ_ПАКЕТА
   ```
 - Показать подробную информацию о пакете
   ```
-  apt show ИМЯ_ПАКЕТА
+  sudo apt show ИМЯ_ПАКЕТА
   ```
 - Установить пакет
   ```
-  apt install ИМЯ_ПАКЕТА
+  sudo apt install ИМЯ_ПАКЕТА
   ```
 - Удалить пакет
   ```
-  apt remove ИМЯ_ПАКЕТА
+  sudo apt remove ИМЯ_ПАКЕТА
   ```
 - Список пакетов для которых есть обновления
   ```
-  apt list --upgradable
+  sudo apt list --upgradable
   ```
 - Обновить все пакеты для которых есть обновления
   ```
-  apt upgrade
+  sudo apt upgrade
   ```
 - Обновление одного (нескольких) пакета (пакетов)
   ```
-  apt update
-  apt list --upgradable
-  apt install --only-upgrade <package>
+  sudo apt update
+  sudo apt list --upgradable
+  sudo apt install --only-upgrade <package>
   ```
 - Полное обновление системы
   ```
-  apt full-upgrade
+  sudo apt full-upgrade
   ```
 - Редактировать файл источников программного обеспечения
   ```
-  apt edit-sources
+  sudo apt edit-sources
   ```
 
 ## MySQL
