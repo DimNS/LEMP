@@ -50,6 +50,12 @@
   sudo apt edit-sources
   ```
 
+### Основные команды Ubuntu
+- Название и номер версии ОС
+  ```
+  lsb_release -a
+  ```
+
 ## MySQL
 
 ### Система
