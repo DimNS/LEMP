@@ -67,6 +67,10 @@
   ```
   tar -cf www.tar /var/www
   ```
+- Просмотр журнала конкретного сервиса
+  ```
+  journalctl -u ssh -e
+  ```
 
 ## MySQL
 
