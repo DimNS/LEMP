@@ -39,7 +39,5 @@ sudo nano /etc/mysql/my.cnf
 sudo service mysql restart
 ```
 
-### Теперь для подключения к mysql в консоли надо писать так
-```
-mysql --socket=/var/run/mysqld/mysqld.sock
-```
+### Полезные ссылки
+[Как устранить ошибки сокета в MySQL](https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-socket-errors-in-mysql)
