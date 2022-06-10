@@ -16,7 +16,20 @@ service php7.2-fpm status
 service php7.4-fpm status
 ```
 
-### Установка PHP-FPM
+### Настройка PHP
+Для FPM и CLI
+```
+nano /etc/php/7.x/fpm/php.ini
+nano /etc/php/7.x/cli/php.ini
+```
+> Содержимое для файла:
+> ```
+> error_reporting = E_ALL
+> display_errors = Off
+> log_errors = On
+> error_log = /var/www/php7x_errors.log
+> ```
+
 Открываем конфиг и настраиваем путь для статуса
 ```
 nano /etc/php/7.x/fpm/pool.d/www.conf
