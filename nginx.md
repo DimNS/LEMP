@@ -14,6 +14,8 @@ nano /etc/passwd
 ```
 > Заменить `/usr/sbin/nologin` на `/bin/bash`
 
+\* Этим мы включаем возможность входить по SSH пользователю `www-data`
+
 ### Первичная настройка
 ```
 nano /etc/nginx/nginx.conf
