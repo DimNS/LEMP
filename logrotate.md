@@ -25,7 +25,7 @@ sudo nano /etc/logrotate.d/www
 >     test ! -f /var/run/nginx.pid || kill -USR1 `cat /var/run/nginx.pid`
 >   endscript
 > }
-> 
+>
 > /var/www/nginx_error.log {
 >   daily
 >   compress
@@ -38,7 +38,21 @@ sudo nano /etc/logrotate.d/www
 >     test ! -f /var/run/nginx.pid || kill -USR1 `cat /var/run/nginx.pid`
 >   endscript
 > }
-> 
+>
+> /var/www/php72_errors.log {
+>   daily
+>   compress
+>   delaycompress
+>   rotate 2
+>   missingok
+>   notifempty
+>   create 644 www-data www-data
+>   sharedscripts
+>   postrotate
+>     service php7.2-fpm flush-logs > /dev/null
+>   endscript
+> }
+>
 > /var/www/php74_errors.log {
 >   daily
 >   compress
