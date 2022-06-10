@@ -21,7 +21,7 @@ sudo nano /etc/tmpfiles.d/clear.conf
 > D /var/tmp 1777 root root 30d
 > ```
 
-### Меняем порт SSH
+### Меняем порт SSH на нестандартный номер
 ```
 sudo nano /etc/ssh/sshd_config
 ```
@@ -33,6 +33,7 @@ sudo nano /etc/ssh/sshd_config
 ```
 sudo service ssh restart
 ```
+\* Так вы избегаете попытки брутфорса пароля для пользователя root, обычно ломятся по стандартным портам
 
 ### Настраиваем fail2ban
 ```
