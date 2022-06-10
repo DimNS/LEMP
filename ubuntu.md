@@ -92,3 +92,9 @@ netfilter-persistent reload
 # Перезагружаем ОС и проверяем
 iptables -L -v --line-numbers
 ```
+
+### Создаём отдельного пользователя "username" и разрешаем ему использовать команду sudo
+```
+adduser username
+usermod -aG sudo username
+```
