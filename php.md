@@ -30,6 +30,7 @@ nano /etc/php/7.x/cli/php.ini
 > error_log = /var/www/php7x_errors.log
 > ```
 
+### Настройка PHP-FPM
 Открываем конфиг и настраиваем путь для статуса
 ```
 nano /etc/php/7.x/fpm/pool.d/www.conf
@@ -54,45 +55,45 @@ nano /etc/nginx/sites-available/default
 > server {
 >     listen 80;
 >     listen [::]:80;
-> 
+>
 >     server_name domain.hosting.ru;
-> 
+>
 >     root /var/www/domains/domain.hosting.ru;
 >     index index.php index.html
-> 
+>
 >     error_page 405 =200 $request_uri;
-> 
+>
 >     # Disallow all dot files
 >     location ~ /\. {
 >         deny all;
 >         access_log off;
 >         log_not_found off;
 >     }
-> 
+>
 >     # Location for php-fpm status
 >     location /status7x {
 >         auth_basic "Restricted";
 >         auth_basic_user_file /var/www/domains/domain.hosting.ru/.htpasswd;
-> 
+>
 >         include fastcgi_params;
 >         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 >         fastcgi_pass unix:/run/php/php7.x-fpm.sock;
 >     }
->     
+>
 >     # Root location
 >     location / {
 >         try_files $uri $uri/ /index.php$is_args$args;
-> 
+>
 >         # Location for php
 >         location ~ \.php$ {
 >             try_files $uri =404;
-> 
+>
 >             include fastcgi.conf;
 >             fastcgi_pass unix:/run/php/php7.x-fpm.sock;
 >             fastcgi_index index.php;
->         }        
+>         }
 >     }
->     
+>
 >     # Root location alternatively
 >     #location / {
 >     #    try_files $uri $uri/ /index.html$is_args$args;
