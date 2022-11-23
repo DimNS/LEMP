@@ -21,7 +21,7 @@ sudo apt upgrade -y
 sudo apt autoremove
 
 sudo apt update
-sudo apt install nmap htop mc composer iptables-persistent fail2ban software-properties-common net-tools zip unzip -y
+sudo apt install nmap htop mc iptables-persistent fail2ban software-properties-common net-tools zip unzip -y
 ```
 
 ### Очистка временных каталогов от содержимого которое не использовалось больше 30 дней
