@@ -54,7 +54,7 @@
   apt edit-sources
   ```
 
-### Основные команды Ubuntu
+### Основные команды Debian
 - Название и номер версии ОС
   ```
   lsb_release -a
@@ -70,6 +70,14 @@
 - Просмотр журнала конкретного сервиса
   ```
   journalctl -u ssh -e
+  ```
+
+### Другие полезные команды
+- осмотреть и поменять временную зону сервера
+  ```
+  timedatectl status
+  timedatectl set-timezone UTC
+  timedatectl status
   ```
 
 ## MySQL
