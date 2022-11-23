@@ -15,6 +15,7 @@ apt update
 apt policy nginx
 apt install nginx -y
 service nginx status
+mkdir /var/www
 chown -R www-data:www-data /var/www
 passwd www-data
 grep www-data /etc/passwd
