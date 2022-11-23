@@ -93,5 +93,5 @@ nano /etc/nginx/nginx.conf
 Проверяем и перечитываем конфиг:
 ```
 nginx -t
-service nginx reload
+nginx -s reload
 ```
