@@ -1,6 +1,6 @@
 # Повседневные команды
 
-## Ubuntu
+## Debian
 
 ### Быстрый запуск ранее выполняемых команд
 - Нажимаем CTRL+R и жмем ENTER
@@ -9,49 +9,49 @@
 ### Основные команды apt
 - Обновить списки доступных пакетов - это самая главная команда которую необходимо выполнять практически перед любой другой командой apt, чтобы быть уверенными что работаем с актуальным списком пакетов
   ```
-  sudo apt update
+  apt update
   ```
 - Поиск пакетов по имени
   ```
-  sudo apt search ИМЯ_ПАКЕТА
+  apt search ИМЯ_ПАКЕТА
   ```
 - Показать подробную информацию о пакете
   ```
-  sudo apt show ИМЯ_ПАКЕТА
+  apt show ИМЯ_ПАКЕТА
   ```
 - Установить пакет
   ```
-  sudo apt install ИМЯ_ПАКЕТА
+  apt install ИМЯ_ПАКЕТА
   ```
 - Удалить пакет
   ```
-  sudo apt remove ИМЯ_ПАКЕТА
+  apt remove ИМЯ_ПАКЕТА
   ```
 - Показать список установленных пакетов по маске
   ```
-  sudo apt list --installed | grep ИМЯ_ПАКЕТА_ИЛИ_ЧАСТИ_ПАКЕТА
+  apt list --installed | grep ИМЯ_ПАКЕТА_ИЛИ_ЧАСТИ_ПАКЕТА
   ```
 - Список пакетов для которых есть обновления
   ```
-  sudo apt list --upgradable
+  apt list --upgradable
   ```
 - Обновить все пакеты для которых есть обновления
   ```
-  sudo apt upgrade
+  apt upgrade
   ```
 - Обновление одного (нескольких) пакета (пакетов)
   ```
-  sudo apt update
-  sudo apt list --upgradable
-  sudo apt install --only-upgrade <package>
+  apt update
+  apt list --upgradable
+  apt install --only-upgrade <package>
   ```
 - Полное обновление системы
   ```
-  sudo apt full-upgrade
+  apt full-upgrade
   ```
 - Редактировать файл источников программного обеспечения
   ```
-  sudo apt edit-sources
+  apt edit-sources
   ```
 
 ### Основные команды Ubuntu
