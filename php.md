@@ -1,48 +1,47 @@
 # PHP
-> Обратите внимание на использование буквы `x` в нескольких местах: `7.x`, `status7x`
+> Обратите внимание на использование буквы `x` в нескольких местах: `x.x`, `statusxx`
 > Их необходимо заменить на номер необходимой вам версии PHP
 
 ### Установка нескольких версий PHP
 ```
-add-apt-repository ppa:ondrej/php
-apt update
-apt show php
-apt install php7.2 php7.2-fpm php7.2-curl php7.2-gd php7.2-mysql php7.2-mbstring php7.2-zip php7.2-intl php7.2-xsl php7.2-sqlite3 -y
+curl -sSL https://packages.sury.org/php/README.txt | bash -x
+apt show php -a
 apt install php7.4 php7.4-fpm php7.4-curl php7.4-gd php7.4-mysql php7.4-mbstring php7.4-zip php7.4-intl php7.4-xsl php7.4-sqlite3 -y
+apt install php8.1 php8.1-fpm php8.1-curl php8.1-gd php8.1-mysql php8.1-mbstring php8.1-zip php8.1-intl php8.1-xsl php8.1-sqlite3 -y
 php -v
-php7.2 -v
 php7.4 -v
-service php7.2-fpm status
+php8.1 -v
 service php7.4-fpm status
+service php8.1-fpm status
 ```
 
 ### Настройка PHP
 Для FPM и CLI
 ```
-nano /etc/php/7.x/fpm/php.ini
-nano /etc/php/7.x/cli/php.ini
+nano /etc/php/x.x/fpm/php.ini
+nano /etc/php/x.x/cli/php.ini
 ```
 > Содержимое для файла:
 > ```
 > error_reporting = E_ALL
 > display_errors = Off
 > log_errors = On
-> error_log = /var/www/php7x_errors.log
+> error_log = /var/www/phpxx_errors.log
 > ```
 
 ### Настройка PHP-FPM
 Открываем конфиг и настраиваем путь для статуса
 ```
-nano /etc/php/7.x/fpm/pool.d/www.conf
+nano /etc/php/x.x/fpm/pool.d/www.conf
 ```
 > Содержимое для файла:
 > ```
-> pm.status_path = /status7x
+> pm.status_path = /statusxx
 > ```
 Также находим в конфиге путь до php-fpm сокета, ключ `listen` и записываем себе в блокнотик этот путь, он пригодится при настройке в nginx
 Перечитываем настройки
 ```
-service php7.x-fpm reload
+service phpx.x-fpm reload
 ```
 
 ### Default сайт
@@ -71,13 +70,13 @@ nano /etc/nginx/sites-available/default
 >     }
 >
 >     # Location for php-fpm status
->     location /status7x {
+>     location /statusxx {
 >         auth_basic "Restricted";
 >         auth_basic_user_file /var/www/domains/domain.hosting.ru/.htpasswd;
 >
 >         include fastcgi_params;
 >         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
->         fastcgi_pass unix:/run/php/php7.x-fpm.sock;
+>         fastcgi_pass unix:/run/php/phpx.x-fpm.sock;
 >     }
 >
 >     # Root location
@@ -89,7 +88,7 @@ nano /etc/nginx/sites-available/default
 >             try_files $uri =404;
 >
 >             include fastcgi.conf;
->             fastcgi_pass unix:/run/php/php7.x-fpm.sock;
+>             fastcgi_pass unix:/run/php/phpx.x-fpm.sock;
 >             fastcgi_index index.php;
 >         }
 >     }
