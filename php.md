@@ -23,7 +23,7 @@ nano /etc/php/x.x/cli/php.ini
 ```
 > Содержимое для файла:
 > ```
-> error_reporting = E_ALL
+> error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
 > display_errors = Off
 > log_errors = On
 > error_log = /var/www/phpxx_errors.log
