@@ -12,7 +12,7 @@
   - DNS: `Timeweb.ru`. Для автоматического продления wildcard-сертификата необходимо динамическое управления DNS-записями посредством API. Была попытка сделать на Яндекс.Коннект, но у них медленно происходит обновление информации из-за этого скрипт продления сертификата не успевает увидеть необходимую запись в DNS.
 
 ## Содержание
-- [Ubuntu](https://github.com/DimNS/LEMP/blob/master/ubuntu.md)
+- [Debian](https://github.com/DimNS/LEMP/blob/master/debian.md)
   - [logrotate](https://github.com/DimNS/LEMP/blob/master/logrotate.md)
   - [Nginx Amplify](https://github.com/DimNS/LEMP/blob/master/nginx_amplify.md)
 - [MySQL](https://github.com/DimNS/LEMP/blob/master/mysql.md)
