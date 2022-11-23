@@ -2,11 +2,16 @@
 
 ### Установка
 ```
-sudo apt update
-sudo apt policy mysql-server
-sudo apt install mysql-server -y
-sudo service mysql status
-sudo mysql_secure_installation
+apt update
+apt install gnupg
+https://dev.mysql.com/downloads/repo/apt/
+cd /opt
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+dpkg -i mysql-apt-config*
+apt update
+apt policy mysql-server
+apt install mysql-server -y
+service mysql status
 ```
 
 ### Глобальные настройки
