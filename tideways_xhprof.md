@@ -4,11 +4,11 @@
 ### Установка
 Смотрим [в репозитории](https://github.com/tideways/php-xhprof-extension/releases) номер последней версии
 ```
-sudo apt update
-sudo apt install graphviz -y
+apt update
+apt install graphviz -y
 cd /opt/
 wget https://github.com/tideways/php-xhprof-extension/releases/download/v5.0.4/tideways-xhprof_5.0.4_amd64.deb
-dpkg -i tideways-xhprof_5.0.4_amd64.deb
+dpkg -i tideways-xhprof*
 ```
 
 ### Подключение
@@ -20,7 +20,7 @@ dpkg -i tideways-xhprof_5.0.4_amd64.deb
   > ```
 - перезапускаем php-fpm
   ```
-  sudo service php7.4-fpm reload
+  service php7.4-fpm reload
   ```
 - проверяем
   ```
@@ -74,7 +74,7 @@ dpkg -i tideways-xhprof_5.0.4_amd64.deb
 - проверяем и перечитываем конфиг
   ```
   nginx -t
-  sudo service nginx reload
+  nginx -s reload
   ```
 
 ### Использование
