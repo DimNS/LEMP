@@ -15,6 +15,11 @@ service php7.4-fpm status
 service php8.1-fpm status
 ```
 
+### Выбор версии PHP по умолчанию, эта версия будет работать с командой `php`
+```
+update-alternatives --config php
+```
+
 ### Настройка PHP
 Для FPM и CLI
 ```
