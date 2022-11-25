@@ -39,21 +39,7 @@ nano /etc/logrotate.d/www
 >   endscript
 > }
 >
-> /var/www/php72_errors.log {
->   daily
->   compress
->   delaycompress
->   rotate 2
->   missingok
->   notifempty
->   create 644 www-data www-data
->   sharedscripts
->   postrotate
->     service php7.2-fpm flush-logs > /dev/null
->   endscript
-> }
->
-> /var/www/php74_errors.log {
+> /var/www/php74_fpm_errors.log {
 >   daily
 >   compress
 >   delaycompress
@@ -65,6 +51,17 @@ nano /etc/logrotate.d/www
 >   postrotate
 >     service php7.4-fpm flush-logs > /dev/null
 >   endscript
+> }
+>
+> /var/www/php74_cli_errors.log {
+>   daily
+>   compress
+>   delaycompress
+>   rotate 2
+>   missingok
+>   notifempty
+>   create 644 www-data www-data
+>   sharedscripts
 > }
 > ```
 
