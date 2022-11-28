@@ -67,9 +67,30 @@
   ```
   tar -cf www.tar /var/www
   ```
+
+### Команды для работы с сервисами (systemd)
+- Перечитать systemd при изменении файла сервиса, добавлении нового
+  ```
+  systemctl daemon-reload
+  ```
+- Активировать новый сервис
+  ```
+  systemctl enable /lib/systemd/user/name.service
+  ```
+- Деактивировать сервис
+  ```
+  systemctl disable nameservice
+  ```
+- Посмотреть статус\запустить\перезапустить\остановить
+  ```
+  service nameservice status
+  service nameservice start
+  service nameservice restart
+  service nameservice stop
+  ```
 - Просмотр журнала конкретного сервиса
   ```
-  journalctl -u ssh -e
+  journalctl -u nameservice -e
   ```
 
 ### Другие полезные команды
