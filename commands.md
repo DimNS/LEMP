@@ -1,5 +1,16 @@
 # Повседневные команды
 
+- [Debian](https://github.com/DimNS/LEMP/blob/master/commands.md#debian)
+  - [Быстрый запуск ранее выполняемых команд](https://github.com/DimNS/LEMP/blob/master/commands.md#быстрый-запуск-ранее-выполняемых-команд)
+  - [Основные команды apt](https://github.com/DimNS/LEMP/blob/master/commands.md#основные-команды-apt)
+  - [Основные команды Debian](https://github.com/DimNS/LEMP/blob/master/commands.md#основные-команды-debian)
+  - [Команды для работы с сервисами (systemd)](https://github.com/DimNS/LEMP/blob/master/commands.md#команды-для-работы-с-сервисами-systemd)
+  - [Другие полезные команды](https://github.com/DimNS/LEMP/blob/master/commands.md#другие-полезные-команды)
+- [MySQL](https://github.com/DimNS/LEMP/blob/master/commands.md#mysql)
+  - [Система](https://github.com/DimNS/LEMP/blob/master/commands.md#система)
+  - [Таблицы](https://github.com/DimNS/LEMP/blob/master/commands.md#таблицы)
+  - [Пользователи](https://github.com/DimNS/LEMP/blob/master/commands.md#пользователи)
+
 ## Debian
 
 ### Быстрый запуск ранее выполняемых команд
