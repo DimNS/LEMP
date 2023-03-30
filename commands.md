@@ -111,6 +111,16 @@
   timedatectl set-timezone UTC
   timedatectl status
   ```
+- Посмотреть прослушиваемые TCP, UDP и UNIX Socket порты
+  ```
+  netstat -ltuxnp
+  ```
+  > l - все открытые порты (LISTEN)
+  > t - по протоколу TCP
+  > u - по протоколу UDP
+  > x - по протоколу UNIX Socket
+  > n - без резолва IP/имён
+  > p - но с названиями процессов и PID-ами
 
 ## MySQL
 
