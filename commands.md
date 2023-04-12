@@ -6,6 +6,7 @@
   - [Основные команды Debian](https://github.com/DimNS/LEMP/blob/master/commands.md#основные-команды-debian)
   - [Команды для работы с сервисами (systemd)](https://github.com/DimNS/LEMP/blob/master/commands.md#команды-для-работы-с-сервисами-systemd)
   - [Другие полезные команды](https://github.com/DimNS/LEMP/blob/master/commands.md#другие-полезные-команды)
+  - [Полезные каталоги](https://github.com/DimNS/LEMP/blob/master/commands.md#полезные-каталоги)
 - [MySQL](https://github.com/DimNS/LEMP/blob/master/commands.md#mysql)
   - [Система](https://github.com/DimNS/LEMP/blob/master/commands.md#система)
   - [Таблицы](https://github.com/DimNS/LEMP/blob/master/commands.md#таблицы)
@@ -121,6 +122,14 @@
   > - `x` - по протоколу UNIX Socket
   > - `n` - без резолва IP/имён
   > - `p` - но с названиями процессов и PID-ами
+
+### Полезные каталоги
+- Cron
+  ```
+  /etc/crontab
+  /etc/cron.*/.
+  /var/spool/cron/
+  ```
 
 ## MySQL
 
