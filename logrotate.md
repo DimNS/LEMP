@@ -18,6 +18,7 @@ nano /etc/logrotate.d/www
 >   compress
 >   delaycompress
 >   rotate 2
+>   copytruncate
 >   missingok
 >   nocreate
 >   sharedscripts
@@ -31,6 +32,7 @@ nano /etc/logrotate.d/www
 >   compress
 >   delaycompress
 >   rotate 2
+>   copytruncate
 >   missingok
 >   nocreate
 >   sharedscripts
@@ -44,6 +46,7 @@ nano /etc/logrotate.d/www
 >   compress
 >   delaycompress
 >   rotate 2
+>   copytruncate
 >   missingok
 >   notifempty
 >   create 644 www-data www-data
@@ -58,6 +61,7 @@ nano /etc/logrotate.d/www
 >   compress
 >   delaycompress
 >   rotate 2
+>   copytruncate
 >   missingok
 >   notifempty
 >   create 644 www-data www-data
